@@ -29,7 +29,18 @@ private lateinit var binding: ActivityMainBinding
         val texto: TextView = findViewById<TextView>(R.id.textView)
         val botonRestar : Button = findViewById<Button>(R.id.botonRestar)
         val botonSumar : Button = findViewById<Button>(R.id.botonSumar)
+        val botonFactorial : Button = findViewById<Button>(R.id.botonFactorial)
 
+        botonFactorial.setOnClickListener {
+            var numeroFactorial = num.text.toString().toInt()
+
+            var resultado : Int =1
+            while(numeroFactorial>1){
+                resultado = resultado*numeroFactorial
+                numeroFactorial--
+            }
+            texto.setText(resultado.toString())
+        }
         fun actualizarMensaje(edad : Int?, textoResultado : TextView){
             val mensaje = when{
                 edad == null -> "Introduzca un valor"
@@ -62,6 +73,5 @@ private lateinit var binding: ActivityMainBinding
 
     }
 
-
-        }
+}
 

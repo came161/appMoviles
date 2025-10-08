@@ -41,19 +41,27 @@
 
             <Button
                 android:id="@+id/botonSumar"
-                android:layout_width="189dp"
+                android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:text="+"
                 android:textSize="20dp" />
 
             <Button
                 android:id="@+id/botonRestar"
-                android:layout_width="203dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="-"
                 android:textSize="20dp" />
 
+            <Button
+                android:id="@+id/botonFactorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Factorial" />
+
         </LinearLayout>
+
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
