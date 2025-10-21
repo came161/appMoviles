@@ -45,12 +45,20 @@ class MainActivity : AppCompatActivity() {
             cuadrado.moverIzquierda()
         }
         botonCambiarTamanio.setOnClickListener {
-            cuadrado.cambiarTamanio(10,10)
+            cuadrado.cambiarTamanio(150,150)
         }
         botonCambiarColor.setOnClickListener {
-
+            cuadrado.color = ContextCompat.getColor(this, R.color.blue)
         }
-
-
+    }
+    private fun actualizarVista(cuadrado : Cuadrado, cuadradoView: View){
+        //aqui es donde enlazamos la vista con el objeto
+        //la vista actualizará su ancho y alto con los datos del objeto
+        cuadradoView.layoutParams.width = cuadrado.ancho
+        cuadradoView.layoutParams.height = cuadrado.alto
+        //Cambiamos color
+        cuadradoView.setBackgroundColor(cuadrado.color)
+        //actualizar cordenadas
+        
     }
 }
