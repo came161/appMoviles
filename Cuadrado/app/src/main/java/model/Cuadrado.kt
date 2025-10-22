@@ -19,11 +19,15 @@ class Cuadrado (var color: Int , var ancho: Int, var alto : Int ) {
     fun moverIzquierda(){
         x-=10;
     }
-    fun cambiarTamanio(nuevoAncho: Int, nuevoAlto : Int){
-        alto = nuevoAlto
-        ancho = nuevoAncho
-    }
 
+    fun aumentarTamanio() {
+        alto = alto+10
+        ancho = ancho+10
+    }
+    fun disminuirTamanio(){
+        alto = alto-10
+        ancho = ancho-10
+    }
 
 
 
