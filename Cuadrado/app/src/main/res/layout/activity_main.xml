@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <View android:id="@+id/cuadrado" android:layout_width="100dp" android:layout_height="100dp" android:layout_centerInParent="true" android:background="#FF0000"/>
 
@@ -19,8 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonAbajo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="-2dp"
         android:text="Aumentar Tamaño" />
 
     <Button
@@ -28,17 +28,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/aumentarTamaño"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_alignRight="@id/aumentarTamaño"
+        android:layout_marginTop="14dp"
         android:text="Disminuir Tamaño" />
 
     <Button
         android:id="@+id/buttonCambiarColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/disminuirTamanio"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/buttonAbajo"
+        android:layout_alignRight="@id/aumentarTamaño"
+        android:layout_marginTop="114dp"
         android:text="Cambiar color" />
+
+    <Button
+        android:id="@+id/cambiarColorBorde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAbajo"
+        android:layout_alignRight="@id/aumentarTamaño"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="-1dp"
+        android:text="Cambiar color borde" />
+
+    <Button
+        android:id="@+id/cuatroColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cambiarColorBorde"
+        android:layout_alignParentRight="true"
+        android:text="Cambiar 4 colores" />
 
 </RelativeLayout>
